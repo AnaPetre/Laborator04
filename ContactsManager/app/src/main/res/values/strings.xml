@@ -1,0 +1,19 @@
+<resources>
+    <!-->aici declaram toate variabilele si string-urile pe care le putem vedea in interfata<-->
+    <string name="app_name">Contacts Manager</string>
+    <string name="show_additional_fields">Show Additional Fields</string>
+    <string name="hide_additional_fields">Hide Additional Fields</string>
+    <!-->aici sunt campurile pe care le folosim cand adaugam un contact nou in agenda telefonica<-->
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="job_title">Job Title</string>
+    <string name="company">Company</string>
+    <string name="website">Website</string>
+    <string name="IM">IM</string>
+    <!-->aici avem mesajul de eroare care va aparea cand nu am introdus niciun numar in EditText<-->
+    <string name="phone_error">Phone number received from intent is null!</string>
+</resources>

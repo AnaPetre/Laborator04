@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--> Toate elementele sunt incluse intr-un container de tip ScrollView<-->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ro.pub.cs.systems.eim.lab04.contactsmanager.graphicuserinterface.ContactsManagerActivity">
+
+    <!--> Fiecare container poate fi inclus intr-un mecanism de dispunere a continutului de tip
+    LinearLayout cu orientare pe verticala<-->
+    <!-->Avem 2 containere (asa cere in lab 4 si ne zice acolo cum sunt impartite)<-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-->buton pentru afisarea anumitor campuri ascunse: "SHOW"<-->
+        <Button
+            android:id="@+id/show_hide_additional_fields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|right"
+            android:text="@string/show_additional_fields"/>
+
+        <!-->buton pentru adaugarea numelui in noul contact<-->
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="@string/name"/>
+
+        <!-->buton pentru afisarea (dar nu si editarea) numarului de tel
+        noului contact<-->
+        <!-->daca vrem sa putem edita numarul de telefon => android:enabled:"true"<-->
+        <EditText
+            android:id="@+id/phone_number_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="@string/phone_number"
+            android:enabled="false"/>
+
+        <!-->buton pentru adaugarea unei adrese de email pentru noul contact<-->
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="@string/email"/>
+
+        <!-->buton pentru adaugarea unei adrese pentru noul contact<-->
+        <EditText
+            android:id="@+id/address_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress"
+            android:hint="@string/address"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <!-->buton pentru SAVE = salvarea contactului in agenda<-->
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/save"/>
+
+            <!-->buton pentru CANCEL = renuntarea la adaugarea in agenda<-->
+            <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/cancel"/>
+        </LinearLayout>
+
+        <!-->Al doilea container: initial acesta nu este vizibil:
+        adroid:visibility:"invisible"<-->
+        <LinearLayout
+            android:id="@+id/additional_fields_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <!-->buton pentru adaugarea unui job pentru noul contact<-->
+            <EditText
+                android:id="@+id/job_title_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/job_title"/>
+
+            <!-->buton pentru adaugarea companiei la care lucreaza noul contact<-->
+            <EditText
+                android:id="@+id/company_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/company"/>
+
+            <!-->buton pentru adaugare website<-->
+            <EditText
+                android:id="@+id/website_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textWebEditText"
+                android:hint="@string/website"/>
+
+            <!-->buton pentru adaugare IM<-->
+            <EditText
+                android:id="@+id/im_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="@string/IM"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
